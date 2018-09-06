@@ -1,0 +1,13 @@
+c:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Test\obj\Debug\Tentcent.Ai.Test.csproj.CoreCompileInputs.cache
+c:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Test\bin\Debug\Tentcent.Ai.Test.exe.config
+c:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Test\bin\Debug\Tentcent.Ai.Test.exe
+c:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Test\bin\Debug\Tentcent.Ai.Test.pdb
+c:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Test\bin\Debug\Tentcent.Ai.Sdk.dll
+c:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Test\bin\Debug\Newtonsoft.Json.dll
+c:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Test\bin\Debug\LitJSON.dll
+c:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Test\bin\Debug\Tentcent.Ai.Sdk.pdb
+c:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Test\bin\Debug\Newtonsoft.Json.xml
+c:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Test\obj\Debug\Tentcent.Ai.Test.csprojAssemblyReference.cache
+c:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Test\obj\Debug\Tentcent.Ai.Test.csproj.CopyComplete
+c:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Test\obj\Debug\Tentcent.Ai.Test.exe
+c:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Test\obj\Debug\Tentcent.Ai.Test.pdb
