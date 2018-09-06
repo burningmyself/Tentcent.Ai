@@ -402,7 +402,7 @@ namespace Tentcent.Ai.Sdk
 
                 if (pair.Key != "Sign" && pair.Value.ToString() != "")
                 {
-                    buff += pair.Key.Trim() + "=" + ToEncode(pair.Value.ToString().Trim()) + "&";
+                    buff += pair.Key.Trim() + "=" + UrlEncode(pair.Value.ToString().Trim()) + "&";
                 }
             }
             buff = buff.Trim('&');

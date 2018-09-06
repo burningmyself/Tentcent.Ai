@@ -1,0 +1,10 @@
+C:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Sdk\obj\Debug\Tentcent.Ai.Sdk.csprojAssemblyReference.cache
+C:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Sdk\obj\Debug\Tentcent.Ai.Sdk.csproj.CoreCompileInputs.cache
+C:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Sdk\bin\Debug\Tentcent.Ai.Sdk.dll
+C:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Sdk\bin\Debug\Tentcent.Ai.Sdk.pdb
+C:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Sdk\bin\Debug\LitJSON.dll
+C:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Sdk\bin\Debug\Newtonsoft.Json.dll
+C:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Sdk\bin\Debug\Newtonsoft.Json.xml
+C:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Sdk\obj\Debug\Tentcent.Ai.Sdk.csproj.CopyComplete
+C:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Sdk\obj\Debug\Tentcent.Ai.Sdk.dll
+C:\Users\92888\source\repos\Tentcent.Ai\Tentcent.Ai.Sdk\obj\Debug\Tentcent.Ai.Sdk.pdb
