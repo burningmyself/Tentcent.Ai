@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FaceServer.cs" />
+    <Compile Include="FaceUrl.cs" />
     <Compile Include="ParaData.cs" />
     <Compile Include="OcrServer.cs" />
     <Compile Include="OcrUrl.cs" />
