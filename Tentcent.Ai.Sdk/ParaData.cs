@@ -14,14 +14,14 @@ using System.Xml;
 namespace Tentcent.Ai.Sdk
 {
     [Serializable]
-    public class BaseData
+    public class ParaData
     {
-        public BaseData()
+        public ParaData()
         {
 
         }
 
-        public BaseData(string json)
+        public ParaData(string json)
         {
             if (string.IsNullOrEmpty(json))
             {
@@ -43,7 +43,7 @@ namespace Tentcent.Ai.Sdk
             }
         }
 
-        public BaseData(string[] data)
+        public ParaData(string[] data)
         {
             for (int i = 0; i < data.Length; i++)
             {
@@ -278,7 +278,7 @@ namespace Tentcent.Ai.Sdk
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
-        public static string ToEncode(string strCode)
+        public static string UrlEncode(string strCode)
         {
             StringBuilder sb = new StringBuilder();
             byte[] byStr = System.Text.Encoding.UTF8.GetBytes(strCode); //默认是System.Text.Encoding.Default.GetBytes(str)
@@ -402,30 +402,7 @@ namespace Tentcent.Ai.Sdk
 
                 if (pair.Key != "Sign" && pair.Value.ToString() != "")
                 {
-                    buff += pair.Key.Trim() + "=" +ToEncode(pair.Value.ToString().Trim()) + "&";
-                }
-            }
-            buff = buff.Trim('&');
-            return buff;
-        }
-
-        /// <summary>
-        /// 腾讯OCRUrl编码
-        /// </summary>
-        /// <returns></returns>
-        public string MakeToUrlUpper()
-        {
-            string buff = string.Empty;
-            foreach (KeyValuePair<string, string> pair in m_values)
-            {
-                if (pair.Value == null)
-                {
-                    throw new Exception("Data内部含有值为null的字段!");
-                }
-
-                if (pair.Key != "Sign" && pair.Value.ToString() != "")
-                {
-                    buff += pair.Key.Trim() + "=" + UrlEncode(pair.Value.ToString().Trim()) + "&";
+                    buff += pair.Key.Trim() + "=" + ToEncode(pair.Value.ToString().Trim()) + "&";
                 }
             }
             buff = buff.Trim('&');
@@ -452,7 +429,7 @@ namespace Tentcent.Ai.Sdk
             }
             return sb.ToString();
         }
-       
+
         /// <summary>
         ///检测签名是否正确
         ///正确返回true，错误抛异常
@@ -494,50 +471,6 @@ namespace Tentcent.Ai.Sdk
             }
             buff = buff.Trim('&');
             return buff;
-        }
-        /// <summary>
-        /// Java UrlEncode
-        /// </summary>
-        /// <param name="input"></param>
-        /// <returns></returns>
-        public string UrlEncode(string input)
-        {
-            StringBuilder newBytes = new StringBuilder();
-            var urf8Bytes = Encoding.UTF8.GetBytes(input);
-
-            foreach (var item in urf8Bytes)
-            {
-                if (IsSpace((char)item))
-                {
-                    newBytes.Append("+");
-                }
-                else if (IsReverseChar((char)item))
-                {
-                    newBytes.Append('%');
-                    newBytes.Append(ByteToHex(item).ToUpper());
-                }
-                else
-                {
-                    newBytes.Append((char)item);
-                }
-            }
-            return newBytes.ToString();
-        }
-
-        private static bool IsReverseChar(char c)
-        {
-            return !((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9')
-                    || c == '-' || c == '_' || c == '.' || c == '~');
-        }
-
-        private static bool IsSpace(char c)
-        {
-            return c == ' ';
-        }
-
-        private static string ByteToHex(byte b)
-        {
-            return b.ToString("x2");
         }
 
         /// <summary>

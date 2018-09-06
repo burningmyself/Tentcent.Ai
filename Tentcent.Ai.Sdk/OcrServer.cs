@@ -8,15 +8,15 @@ namespace Tentcent.Ai.Sdk
 {
     public class OcrServer
     {
-        public static BaseData Init(Dictionary<string, string> dic)
+        public static ParaData Init(Dictionary<string, string> dic)
         {
-            BaseData sendData = new BaseData();
+            ParaData sendData = new ParaData();
             sendData.SetValue("app_id", dic["app_id"]);
-            sendData.SetValue("time_stamp", BaseData.GetTimeStamp(DateTime.Now, 10));
-            sendData.SetValue("nonce_str", BaseData.GenerateOutTradeNo());
+            sendData.SetValue("time_stamp", ParaData.GetTimeStamp(DateTime.Now, 10));
+            sendData.SetValue("nonce_str", ParaData.GenerateOutTradeNo());
             return sendData;
         }
-        public static BaseData IdCard(Dictionary<string, string> dic)
+        public static ParaData IdCard(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
             sendData.SetValue("image", dic["image"]);
@@ -24,23 +24,23 @@ namespace Tentcent.Ai.Sdk
             sendData.SetValue("card_type", dic["card_type"]);
             string sign = sendData.MakeSign(dic["key"]);
             sendData.SetValue("sign", sign);
-            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + sendData.UrlEncode(x.Value.ToString())).ToArray());
-            string json = BaseData.HttpPost(OcrUrl.idCardUrl, postData, Encoding.UTF8);
-            return new BaseData(json);
+            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + ParaData.UrlEncode(x.Value.ToString())).ToArray());
+            string json = ParaData.HttpPost(OcrUrl.idCardUrl, postData, Encoding.UTF8);
+            return new ParaData(json);
         }
 
-        public static BaseData NameCard(Dictionary<string, string> dic)
+        public static ParaData NameCard(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
             sendData.SetValue("image", dic["image"]);
             string sign = sendData.MakeSign(dic["key"]);
             sendData.SetValue("sign", sign);
-            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + sendData.UrlEncode(x.Value.ToString())).ToArray());
-            string json = BaseData.HttpPost(OcrUrl.nameCardUrl, postData, Encoding.UTF8);
-            return new BaseData(json);
+            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + ParaData.UrlEncode(x.Value.ToString())).ToArray());
+            string json = ParaData.HttpPost(OcrUrl.nameCardUrl, postData, Encoding.UTF8);
+            return new ParaData(json);
         }
 
-        public static BaseData Drvie(Dictionary<string, string> dic)
+        public static ParaData Drvie(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
             sendData.SetValue("image", dic["image"]);
@@ -48,12 +48,12 @@ namespace Tentcent.Ai.Sdk
             sendData.SetValue("card_type", dic["card_type"]);
             string sign = sendData.MakeSign(dic["key"]);
             sendData.SetValue("sign", sign);
-            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + sendData.UrlEncode(x.Value.ToString())).ToArray());
-            string json = BaseData.HttpPost(OcrUrl.driveUrl, postData, Encoding.UTF8);
-            return new BaseData(json);
+            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + ParaData.UrlEncode(x.Value.ToString())).ToArray());
+            string json = ParaData.HttpPost(OcrUrl.driveUrl, postData, Encoding.UTF8);
+            return new ParaData(json);
         }
 
-        public static BaseData Car(Dictionary<string, string> dic)
+        public static ParaData Car(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
             if (dic.ContainsKey("image"))
@@ -66,54 +66,54 @@ namespace Tentcent.Ai.Sdk
             }
             string sign = sendData.MakeSign(dic["key"]);
             sendData.SetValue("sign", sign);
-            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + sendData.UrlEncode(x.Value.ToString())).ToArray());
-            string json = BaseData.HttpPost(OcrUrl.carUrl, postData, Encoding.UTF8);
-            return new BaseData(json);
+            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + ParaData.UrlEncode(x.Value.ToString())).ToArray());
+            string json = ParaData.HttpPost(OcrUrl.carUrl, postData, Encoding.UTF8);
+            return new ParaData(json);
         }
 
-        public static BaseData Biz(Dictionary<string, string> dic)
+        public static ParaData Biz(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
             sendData.SetValue("image", dic["image"]);
             string sign = sendData.MakeSign(dic["key"]);
             sendData.SetValue("sign", sign);
-            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + sendData.UrlEncode(x.Value.ToString())).ToArray());
-            string json = BaseData.HttpPost(OcrUrl.bizUrl, postData, Encoding.UTF8);
-            return new BaseData(json);
+            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + ParaData.UrlEncode(x.Value.ToString())).ToArray());
+            string json = ParaData.HttpPost(OcrUrl.bizUrl, postData, Encoding.UTF8);
+            return new ParaData(json);
         }
 
-        public static BaseData Bank(Dictionary<string, string> dic)
+        public static ParaData Bank(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
             sendData.SetValue("image", dic["image"]);
             string sign = sendData.MakeSign(dic["key"]);
             sendData.SetValue("sign", sign);
-            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + sendData.UrlEncode(x.Value.ToString())).ToArray());
-            string json = BaseData.HttpPost(OcrUrl.bankUrl, postData, Encoding.UTF8);
-            return new BaseData(json);
+            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + ParaData.UrlEncode(x.Value.ToString())).ToArray());
+            string json = ParaData.HttpPost(OcrUrl.bankUrl, postData, Encoding.UTF8);
+            return new ParaData(json);
         }
 
-        public static BaseData Gen(Dictionary<string, string> dic)
+        public static ParaData Gen(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
             sendData.SetValue("image", dic["image"]);
             string sign = sendData.MakeSign(dic["key"]);
             sendData.SetValue("sign", sign);
-            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + sendData.UrlEncode(x.Value.ToString())).ToArray());
-            string json = BaseData.HttpPost(OcrUrl.genUrl, postData, Encoding.UTF8);
-            return new BaseData(json);
+            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + ParaData.UrlEncode(x.Value.ToString())).ToArray());
+            string json = ParaData.HttpPost(OcrUrl.genUrl, postData, Encoding.UTF8);
+            return new ParaData(json);
         }
 
 
-        public static BaseData Hand(Dictionary<string, string> dic)
+        public static ParaData Hand(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
             sendData.SetValue("image", dic["image"]);
             string sign = sendData.MakeSign(dic["key"]);
             sendData.SetValue("sign", sign);
-            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + sendData.UrlEncode(x.Value.ToString())).ToArray());
-            string json = BaseData.HttpPost(OcrUrl.handUrl, postData, Encoding.UTF8);
-            return new BaseData(json);
+            string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + ParaData.UrlEncode(x.Value.ToString())).ToArray());
+            string json = ParaData.HttpPost(OcrUrl.handUrl, postData, Encoding.UTF8);
+            return new ParaData(json);
         }
     }
 }

@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseData.cs" />
+    <Compile Include="ParaData.cs" />
     <Compile Include="OcrServer.cs" />
     <Compile Include="OcrUrl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
