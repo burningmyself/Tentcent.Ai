@@ -16,7 +16,10 @@ namespace Tentcent.Ai.Test
             dic.Add("key", "4r7UhH7gi3jbOcet");
             dic.Add("image", IdCardBase64.Data);
             dic.Add("card_type", "0");
-            var data= OcrServer.IdCard(dic);
+            //var data= OcrServer.IdCard(dic);
+            dic.Add("image_a", FaceCompareBase64.Image_A);
+            dic.Add("image_b", FaceCompareBase64.Image_B);
+            var data = FaceServer.FaceCompare(dic);
             Console.WriteLine(data.ToJson());
             Console.ReadKey();
         }

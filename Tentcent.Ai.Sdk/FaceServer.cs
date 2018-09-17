@@ -66,7 +66,7 @@ namespace Tentcent.Ai.Sdk
             string sign = sendData.MakeSign(dic["key"]);
             sendData.SetValue("sign", sign);
             string postData = string.Join("&", sendData.GetValues().Select(x => x.Key.Trim() + "=" + ParaData.UrlEncode(x.Value.ToString())).ToArray());
-            string json = ParaData.HttpPost(FaceUrl.detectMultiFaceUrl, postData, Encoding.UTF8);
+            string json = ParaData.HttpPost(FaceUrl.faceCompareUrl, postData, Encoding.UTF8);
             return new ParaData(json);
         }
         /// <summary>
