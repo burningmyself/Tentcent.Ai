@@ -1,5 +1,6 @@
 # Tentcent.Ai
-
+## 个人博客[https://yangfubing.gitee.io/](https://yangfubing.gitee.io/)
+## 个人Github[https://github.com/burningmyself](https://github.com/burningmyself)
 #### 项目介绍
 开源大家一起补充
 
