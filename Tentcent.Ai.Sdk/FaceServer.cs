@@ -299,5 +299,6 @@ namespace Tentcent.Ai.Sdk
             string json = ParaData.HttpPost(FaceUrl.newPersonFaceUrl, postData, Encoding.UTF8);
             return new ParaData(json);
         }
+
     }
 }

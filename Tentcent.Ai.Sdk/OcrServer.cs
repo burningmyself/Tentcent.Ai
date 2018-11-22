@@ -8,6 +8,11 @@ namespace Tentcent.Ai.Sdk
 {
     public class OcrServer
     {
+        /// <summary>
+        /// 初始化
+        /// </summary>
+        /// <param name="dic"></param>
+        /// <returns></returns>
         public static ParaData Init(Dictionary<string, string> dic)
         {
             ParaData sendData = new ParaData();
@@ -16,6 +21,11 @@ namespace Tentcent.Ai.Sdk
             sendData.SetValue("nonce_str", ParaData.GenerateOutTradeNo());
             return sendData;
         }
+        /// <summary>
+        /// 身份证OCR
+        /// </summary>
+        /// <param name="dic"></param>
+        /// <returns></returns>
         public static ParaData IdCard(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
@@ -28,7 +38,11 @@ namespace Tentcent.Ai.Sdk
             string json = ParaData.HttpPost(OcrUrl.idCardUrl, postData, Encoding.UTF8);
             return new ParaData(json);
         }
-
+        /// <summary>
+        /// 名片OCR
+        /// </summary>
+        /// <param name="dic"></param>
+        /// <returns></returns>
         public static ParaData NameCard(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
@@ -39,7 +53,11 @@ namespace Tentcent.Ai.Sdk
             string json = ParaData.HttpPost(OcrUrl.nameCardUrl, postData, Encoding.UTF8);
             return new ParaData(json);
         }
-
+        /// <summary>
+        /// 行驶证驾驶证OCR
+        /// </summary>
+        /// <param name="dic"></param>
+        /// <returns></returns>
         public static ParaData Drvie(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
@@ -52,7 +70,11 @@ namespace Tentcent.Ai.Sdk
             string json = ParaData.HttpPost(OcrUrl.driveUrl, postData, Encoding.UTF8);
             return new ParaData(json);
         }
-
+        /// <summary>
+        /// 车牌OCR
+        /// </summary>
+        /// <param name="dic"></param>
+        /// <returns></returns>
         public static ParaData Car(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
@@ -70,7 +92,11 @@ namespace Tentcent.Ai.Sdk
             string json = ParaData.HttpPost(OcrUrl.carUrl, postData, Encoding.UTF8);
             return new ParaData(json);
         }
-
+        /// <summary>
+        /// 营业执照OCR
+        /// </summary>
+        /// <param name="dic"></param>
+        /// <returns></returns>
         public static ParaData Biz(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
@@ -81,7 +107,11 @@ namespace Tentcent.Ai.Sdk
             string json = ParaData.HttpPost(OcrUrl.bizUrl, postData, Encoding.UTF8);
             return new ParaData(json);
         }
-
+        /// <summary>
+        /// 银行卡OCR
+        /// </summary>
+        /// <param name="dic"></param>
+        /// <returns></returns>
         public static ParaData Bank(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
@@ -92,7 +122,11 @@ namespace Tentcent.Ai.Sdk
             string json = ParaData.HttpPost(OcrUrl.bankUrl, postData, Encoding.UTF8);
             return new ParaData(json);
         }
-
+        /// <summary>
+        /// 通用OCR
+        /// </summary>
+        /// <param name="dic"></param>
+        /// <returns></returns>
         public static ParaData Gen(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
@@ -104,7 +138,11 @@ namespace Tentcent.Ai.Sdk
             return new ParaData(json);
         }
 
-
+        /// <summary>
+        /// 手写体OCR
+        /// </summary>
+        /// <param name="dic"></param>
+        /// <returns></returns>
         public static ParaData Hand(Dictionary<string, string> dic)
         {
             var sendData = Init(dic);
