@@ -312,6 +312,23 @@ namespace Tentcent.Ai.Sdk
             return encodedData;
         }
         /// <summary>
+        /// 获取文件的Base64编码
+        /// </summary>
+        /// <param name="path"></param>
+        /// <returns></returns>
+        public static string Base64File(string path)
+        {
+            if (string.IsNullOrEmpty(path))
+            {
+                return "";
+            }
+            System.IO.FileStream fs = System.IO.File.OpenRead(path);
+            byte[] dt = new byte[fs.Length];
+            fs.Read(dt, 0, (int)fs.Length);
+            fs.Close();
+            return Convert.ToBase64String(dt);
+        }
+        /// <summary>
         /// Post请求，可定义Headers
         /// </summary>
         /// <param name="Url">请求地址</param>
