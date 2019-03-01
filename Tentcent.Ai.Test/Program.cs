@@ -11,7 +11,7 @@ namespace Tentcent.Ai.Test
     {
         static void Main(string[] args)
         {
-            AiTta();
+            AILab();
         }
 
         public static void IdCard()
