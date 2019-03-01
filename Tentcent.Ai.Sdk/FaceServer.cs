@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Tentcent.Ai.Sdk
 {
+    /// <summary>
+    /// 人脸与人体识别
+    /// </summary>
     public class FaceServer
     {
         /// <summary>

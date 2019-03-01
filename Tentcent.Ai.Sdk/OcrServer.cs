@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Tentcent.Ai.Sdk
 {
+    /// <summary>
+    /// OCR
+    /// </summary>
     public class OcrServer
     {
         /// <summary>

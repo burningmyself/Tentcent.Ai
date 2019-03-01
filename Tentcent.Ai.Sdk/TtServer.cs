@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Tentcent.Ai.Sdk
 {
+    /// <summary>
+    /// 语音合成
+    /// </summary>
     public class TtServer
     {
         /// <summary>
