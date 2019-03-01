@@ -200,3 +200,4 @@ Logs/
 /src/MyCompanyName.AbpZeroTemplate.Web/Logs
 /Apps.WebApi/App_Data
 /Apps.Pay.Test/abc.jpg
+/*.md
